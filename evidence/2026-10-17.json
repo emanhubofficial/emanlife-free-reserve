@@ -1,9 +1,65 @@
 {
   "date": "2026-10-17",
-  "published": false,
+  "published": true,
   "version_before": 6,
-  "version_after": 6,
-  "changes": [],
+  "version_after": 7,
+  "changes": [
+    {
+      "kind": "refresh_evidence",
+      "model": "gemini/gemini-3.8-flash",
+      "detail": "listed on the models and pricing pages (free-tier flag is the owner's)"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "gemini/gemini-3.6-flash",
+      "detail": "listed on the models and pricing pages (free-tier flag is the owner's)"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "gemini/gemini-3.5-flash-lite",
+      "detail": "listed on the models and pricing pages (free-tier flag is the owner's)"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "nvidia/nvidia/nemotron-3-super-120b-a12b",
+      "detail": "listed by the hosted API (trial terms not machine-readable)"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "agnes/agnes-3.0-flash",
+      "detail": "priced at zero on the model page"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "detail": "listed, priced at zero"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "detail": "listed, priced at zero"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "openrouter/google/gemma-4-31b-it:free",
+      "detail": "listed, priced at zero"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "openrouter/thinkingmachines/inkling:free",
+      "detail": "listed, priced at zero"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "zai/glm-4.7-flash",
+      "detail": "listed as free on the pricing page"
+    },
+    {
+      "kind": "refresh_evidence",
+      "model": "zai/glm-4.5-flash",
+      "detail": "listed as free on the pricing page"
+    }
+  ],
   "held": [
     {
       "kind": "new_free_model",
