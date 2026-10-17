@@ -1,8 +1,8 @@
 {
   "date": "2026-10-17",
   "published": true,
-  "version_before": 7,
-  "version_after": 8,
+  "version_before": 8,
+  "version_after": 9,
   "changes": [
     {
       "kind": "refresh_evidence",
