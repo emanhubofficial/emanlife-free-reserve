@@ -65,7 +65,17 @@ Future<void> main(List<String> args) async {
           ),
         );
 
+  // How old an evidence date may be before a confirmed model's date is renewed. Normally 45 days; a
+  // person running the workflow by hand may ask for a different number (0 renews every confirmed
+  // model now, which is true because it was just confirmed).
+  final refreshAfter = int.tryParse(_arg(args, '--refresh-after-days', '45'));
+  if (refreshAfter == null || refreshAfter < 0 || refreshAfter > 365) {
+    stderr.writeln('--refresh-after-days must be a number from 0 to 365');
+    exit(64);
+  }
+
   final decision = decide(
+    policy: Policy(refreshAfterDays: refreshAfter),
     manifest: manifest,
     state: state,
     observations: observations,

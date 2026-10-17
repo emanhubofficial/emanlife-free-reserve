@@ -11,6 +11,10 @@ on:
         description: "Check and report only; sign and publish nothing"
         type: boolean
         default: false
+      refresh_after_days:
+        description: "Renew the evidence date of every confirmed model older than this many days (normal: 45)"
+        type: string
+        default: "45"
 
 # Nothing is granted by default; each job asks for what it needs.
 permissions: {}
@@ -38,10 +42,12 @@ jobs:
 
       - name: Check the providers' own public sources and decide
         id: decide
+        env:
+          REFRESH_AFTER_DAYS: ${{ inputs.refresh_after_days }}
         run: |
           mkdir -p out
           set +e
-          dart run tool/reserve/maintain.dart --manifest site/manifest.json --state state/state.json --out out
+          dart run tool/reserve/maintain.dart --manifest site/manifest.json --state state/state.json --out out --refresh-after-days "${REFRESH_AFTER_DAYS:-45}"
           code=$?
           set -e
           case "$code" in
