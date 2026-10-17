@@ -1,0 +1,116 @@
+name: maintain-catalogue
+
+# Daily check of the free-reserve catalogue against each provider's own public pages (no keys, no
+# inference, nothing spent), and conservative signed publication. See README.md for the policy.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Check and report only; sign and publish nothing"
+        type: boolean
+        default: false
+
+# Nothing is granted by default; each job asks for what it needs.
+permissions: {}
+
+concurrency:
+  group: catalogue-publish
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    # Only the default branch ever runs with the signing key. There is no pull_request trigger.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: publish # holds RESERVE_SIGNING_KEY; restricted to main in the repository settings
+    permissions:
+      contents: write
+      issues: write
+    outputs:
+      published: ${{ steps.decide.outputs.published }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: dart-lang/setup-dart@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+      - run: dart pub get
+
+      - name: Check the providers' own public sources and decide
+        id: decide
+        run: |
+          mkdir -p out
+          set +e
+          dart run tool/reserve/maintain.dart --manifest site/manifest.json --state state/state.json --out out
+          code=$?
+          set -e
+          case "$code" in
+            0|20) echo "published=false" >> "$GITHUB_OUTPUT" ;;
+            10)   echo "published=true"  >> "$GITHUB_OUTPUT" ;;
+            *)    echo "the check failed with status $code"; exit 1 ;;
+          esac
+          # Keep the evidence of every run, and the last 90 only.
+          cp out/decision.json "evidence/$(date -u +%F).json"
+          ls -1 evidence/*.json | head -n -90 | xargs -r rm --
+
+      - name: Sign, verify, replace the published files
+        if: steps.decide.outputs.published == 'true' && inputs.dry_run != true
+        env:
+          # The only place the key exists. It is read from the environment, never written to disk or printed.
+          RESERVE_SIGNING_KEY: ${{ secrets.RESERVE_SIGNING_KEY }}
+        run: |
+          cp out/manifest.json out/next.json
+          dart run tool/reserve/sign.dart out/next.json env:RESERVE_SIGNING_KEY emanlife-reserve-ci-1
+          dart run tool/reserve/verify.dart out/next.json out/next.json.sig trusted_keys.json --previous site/manifest.json
+          cp out/next.json site/manifest.json
+          cp out/next.json.sig site/manifest.json.sig
+
+      - name: Commit the files, the state and the evidence
+        if: inputs.dry_run != true
+        run: |
+          git config user.name "emanlife-catalogue-bot"
+          git config user.email "catalogue-bot@users.noreply.github.com"
+          git add site state evidence
+          if git diff --cached --quiet; then echo "nothing changed"; else
+            git commit -m "Catalogue maintenance $(date -u +%F)"
+            git push
+          fi
+
+      - name: Open or update the review issue for anything held
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f out/decision.json ] || exit 0
+          n=$(python3 -c "import json;print(len(json.load(open('out/decision.json'))['held']))")
+          [ "$n" = "0" ] && exit 0
+          python3 - > out/held.md <<'PY'
+          import json
+          d = json.load(open('out/decision.json'))
+          print('Held for review on', d['date'], '(nothing here is published automatically):\n')
+          for h in d['held']:
+              print('- **%s** `%s`: %s' % (h['kind'], h['model'], h['detail']))
+          PY
+          existing=$(gh issue list --state open --label catalogue-review --json number --jq '.[0].number' || true)
+          if [ -n "$existing" ]; then gh issue edit "$existing" --body-file out/held.md
+          else gh issue create --title "Free Reserve: review needed" --label catalogue-review --body-file out/held.md; fi
+
+  deploy:
+    needs: maintain
+    if: needs.maintain.outputs.published == 'true' && inputs.dry_run != true
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: github-pages
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: site
+      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

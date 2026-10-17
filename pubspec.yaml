@@ -1,0 +1,7 @@
+name: emanlife_reserve_publisher
+description: Scheduled checks and signing for the EmanLife Free Reserve catalogue. No application code.
+publish_to: none
+environment:
+  sdk: ^3.5.0
+dependencies:
+  cryptography: ^2.7.0
