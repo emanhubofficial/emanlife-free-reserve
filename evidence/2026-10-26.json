@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-26",
+  "published": false,
+  "version_before": 9,
+  "version_after": 9,
+  "changes": [],
+  "held": [
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/recursive/flint-v1.0:free",
+      "detail": "newly listed as free (context 262144); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/xingchen-agi/xing4.0-29b-a4b:free",
+      "detail": "newly listed as free (context 262144); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+      "detail": "newly listed as free (context 1000000); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/dots-studio/dots-3-note-preview:free",
+      "detail": "newly listed as free (context 512000); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/liquid/lfm-2.5-2.6b:free",
+      "detail": "newly listed as free (context 65536); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "detail": "newly listed as free (context 1000000); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/thinkingmachines/inkling-small:free",
+      "detail": "newly listed as free (context 1048576); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/poolside/laguna-s-2.1:free",
+      "detail": "newly listed as free (context 262144); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/poolside/laguna-xs-2.1:free",
+      "detail": "newly listed as free (context 262144); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/cohere/north-mini-code:free",
+      "detail": "newly listed as free (context 256000); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+      "detail": "newly listed as free (context 128000); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "detail": "newly listed as free (context 256000); never added automatically"
+    },
+    {
+      "kind": "new_free_model",
+      "model": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "detail": "newly listed as free (context 262144); never added automatically"
+    }
+  ],
+  "requests": [
+    "https://openrouter.ai/api/v1/models",
+    "https://integrate.api.nvidia.com/v1/models",
+    "https://ai.google.dev/gemini-api/docs/models",
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://docs.z.ai/guides/overview/pricing",
+    "https://wiki.agnes-ai.com/en/docs/agnes-30-flash"
+  ],
+  "observations": {
+    "qwen/qwen3-max": {
+      "seen": "manual",
+      "note": "no keyless machine-readable source",
+      "source": ""
+    },
+    "qwen/qwen3-coder-plus": {
+      "seen": "manual",
+      "note": "no keyless machine-readable source",
+      "source": ""
+    },
+    "qwen/qwen3-coder-flash": {
+      "seen": "manual",
+      "note": "no keyless machine-readable source",
+      "source": ""
+    },
+    "qwen/qwen-plus": {
+      "seen": "manual",
+      "note": "no keyless machine-readable source",
+      "source": ""
+    },
+    "qwen/qwen-flash": {
+      "seen": "manual",
+      "note": "no keyless machine-readable source",
+      "source": ""
+    },
+    "qwen/qwen-turbo": {
+      "seen": "manual",
+      "note": "no keyless machine-readable source",
+      "source": ""
+    },
+    "gemini/gemini-3.8-flash": {
+      "seen": "confirmed",
+      "note": "listed on the models and pricing pages (free-tier flag is the owner's)",
+      "source": "https://ai.google.dev/gemini-api/docs/models"
+    },
+    "gemini/gemini-3.7-flash": {
+      "seen": "absent",
+      "note": "not on the provider model pages",
+      "source": "https://ai.google.dev/gemini-api/docs/models"
+    },
+    "gemini/gemini-3.6-flash": {
+      "seen": "confirmed",
+      "note": "listed on the models and pricing pages (free-tier flag is the owner's)",
+      "source": "https://ai.google.dev/gemini-api/docs/models"
+    },
+    "gemini/gemini-3.5-flash": {
+      "seen": "absent",
+      "note": "not on the provider model pages",
+      "source": "https://ai.google.dev/gemini-api/docs/models"
+    },
+    "gemini/gemini-3.5-flash-lite": {
+      "seen": "confirmed",
+      "note": "listed on the models and pricing pages (free-tier flag is the owner's)",
+      "source": "https://ai.google.dev/gemini-api/docs/models"
+    },
+    "nvidia/nvidia/nemotron-3-super-120b-a12b": {
+      "seen": "confirmed",
+      "note": "listed by the hosted API (trial terms not machine-readable)",
+      "source": "https://integrate.api.nvidia.com/v1/models"
+    },
+    "nvidia/nvidia/nemotron-3-nano-30b-a3b": {
+      "seen": "absent",
+      "note": "not in the hosted API model list",
+      "source": "https://integrate.api.nvidia.com/v1/models"
+    },
+    "nvidia/moonshotai/kimi-k2-instruct-0905": {
+      "seen": "absent",
+      "note": "not in the hosted API model list",
+      "source": "https://integrate.api.nvidia.com/v1/models"
+    },
+    "agnes/agnes-3.0-flash": {
+      "seen": "confirmed",
+      "note": "priced at zero on the model page",
+      "source": "https://wiki.agnes-ai.com/en/docs/agnes-30-flash"
+    },
+    "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {
+      "seen": "confirmed",
+      "note": "listed, priced at zero",
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": {
+      "seen": "confirmed",
+      "note": "listed, priced at zero",
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "openrouter/google/gemma-4-31b-it:free": {
+      "seen": "confirmed",
+      "note": "listed, priced at zero",
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "openrouter/qwen/qwen3.8-27b:free": {
+      "seen": "absent",
+      "note": "not in the provider model list",
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "openrouter/thinkingmachines/inkling:free": {
+      "seen": "confirmed",
+      "note": "listed, priced at zero",
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "zai/glm-4.7-flash": {
+      "seen": "confirmed",
+      "note": "listed as free on the pricing page",
+      "source": "https://docs.z.ai/guides/overview/pricing"
+    },
+    "zai/glm-4.5-flash": {
+      "seen": "confirmed",
+      "note": "listed as free on the pricing page",
+      "source": "https://docs.z.ai/guides/overview/pricing"
+    }
+  },
+  "sources": {
+    "openrouter": {
+      "ok": true,
+      "size": 467
+    },
+    "nvidia": {
+      "ok": true,
+      "size": 85
+    },
+    "gemini-models": {
+      "ok": true,
+      "size": 48
+    },
+    "gemini-pricing": {
+      "ok": true,
+      "size": 28
+    },
+    "zai": {
+      "ok": true,
+      "size": 52
+    },
+    "agnes": {
+      "ok": true,
+      "size": 95523
+    }
+  }
+}
