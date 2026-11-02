@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 10,
-  "issued_on": "2026-10-29",
+  "version": 11,
+  "issued_on": "2026-11-02",
   "models": [
     {
       "provider": "qwen",
@@ -480,8 +480,8 @@
       "privacy": "unknown",
       "pinning": "exactVersion",
       "data_use_note": "",
-      "status": "active",
-      "status_note": "",
+      "status": "retired",
+      "status_note": "Checked 2026-11-02: model page no longer states a zero price, on 3 separate daily checks since 2026-10-31. Source: https://wiki.agnes-ai.com/en/docs/agnes-30-flash",
       "evidence": {
         "kind": "promotional",
         "source": "https://wiki.agnes-ai.com/en/docs/faqs and https://wiki.agnes-ai.com/en/docs/agnes-30-flash",
