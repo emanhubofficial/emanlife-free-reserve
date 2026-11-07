@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 11,
-  "issued_on": "2026-11-02",
+  "version": 12,
+  "issued_on": "2026-11-07",
   "models": [
     {
       "provider": "qwen",
@@ -645,8 +645,8 @@
       "privacy": "unknown",
       "pinning": "floatingAlias",
       "data_use_note": "Served on OpenRouter by Thinking Machines. Its data terms were not read; your OpenRouter privacy settings decide which hosts may serve you.",
-      "status": "active",
-      "status_note": "",
+      "status": "retired",
+      "status_note": "Checked 2026-11-07: not in the provider model list, on 3 separate daily checks since 2026-11-05. Source: https://openrouter.ai/api/v1/models",
       "evidence": {
         "kind": "free",
         "source": "https://openrouter.ai/docs/faq and https://openrouter.ai/api/v1/models (pricing of zero)",
