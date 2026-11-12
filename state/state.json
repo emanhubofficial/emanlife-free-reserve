@@ -2,148 +2,148 @@
   "schema": 1,
   "models": {
     "qwen/qwen3-max": {
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "qwen/qwen3-coder-plus": {
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "qwen/qwen3-coder-flash": {
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "qwen/qwen-plus": {
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "qwen/qwen-flash": {
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "qwen/qwen-turbo": {
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "gemini/gemini-3.8-flash": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "gemini/gemini-3.7-flash": {
-      "absent": 26,
+      "absent": 27,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "gemini/gemini-3.6-flash": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "gemini/gemini-3.5-flash": {
-      "absent": 26,
+      "absent": 27,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "gemini/gemini-3.5-flash-lite": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "nvidia/nvidia/nemotron-3-super-120b-a12b": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "nvidia/nvidia/nemotron-3-nano-30b-a3b": {
-      "absent": 26,
+      "absent": 27,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "nvidia/moonshotai/kimi-k2-instruct-0905": {
-      "absent": 26,
+      "absent": 27,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "agnes/agnes-3.0-flash": {
       "confirmed_streak": 0,
       "absent": 0,
-      "not_free": 12,
-      "last_run": "2026-11-11",
+      "not_free": 13,
+      "last_run": "2026-11-12",
       "first_bad": "2026-10-31"
     },
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {
       "confirmed_streak": 0,
-      "absent": 16,
+      "absent": 17,
       "not_free": 0,
-      "last_run": "2026-11-11",
+      "last_run": "2026-11-12",
       "first_bad": "2026-10-27"
     },
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "openrouter/google/gemma-4-31b-it:free": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "openrouter/qwen/qwen3.8-27b:free": {
-      "absent": 26,
+      "absent": 27,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "openrouter/thinkingmachines/inkling:free": {
       "confirmed_streak": 0,
-      "absent": 7,
+      "absent": 8,
       "not_free": 0,
-      "last_run": "2026-11-11",
+      "last_run": "2026-11-12",
       "first_bad": "2026-11-05"
     },
     "zai/glm-4.7-flash": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     },
     "zai/glm-4.5-flash": {
-      "confirmed_streak": 26,
+      "confirmed_streak": 27,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-11"
+      "last_run": "2026-11-12"
     }
   },
   "sources": {
     "openrouter": {
-      "size": 469,
-      "last_ok": "2026-11-11"
+      "size": 468,
+      "last_ok": "2026-11-12"
     },
     "nvidia": {
-      "size": 84,
-      "last_ok": "2026-11-11"
+      "size": 83,
+      "last_ok": "2026-11-12"
     },
     "gemini-models": {
       "size": 137,
-      "last_ok": "2026-11-11"
+      "last_ok": "2026-11-12"
     },
     "gemini-pricing": {
       "size": 123,
-      "last_ok": "2026-11-11"
+      "last_ok": "2026-11-12"
     },
     "zai": {
       "size": 52,
-      "last_ok": "2026-11-11"
+      "last_ok": "2026-11-12"
     },
     "agnes": {
-      "size": 102698,
-      "last_ok": "2026-11-11"
+      "size": 102764,
+      "last_ok": "2026-11-12"
     }
   },
-  "last_run": "2026-11-11"
+  "last_run": "2026-11-12"
 }
