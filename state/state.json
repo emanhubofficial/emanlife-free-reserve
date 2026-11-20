@@ -2,52 +2,52 @@
   "schema": 1,
   "models": {
     "qwen/qwen3-max": {
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "qwen/qwen3-coder-plus": {
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "qwen/qwen3-coder-flash": {
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "qwen/qwen-plus": {
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "qwen/qwen-flash": {
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "qwen/qwen-turbo": {
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "gemini/gemini-3.8-flash": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "gemini/gemini-3.7-flash": {
-      "absent": 34,
+      "absent": 35,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "gemini/gemini-3.6-flash": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "gemini/gemini-3.5-flash": {
-      "absent": 34,
+      "absent": 35,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "gemini/gemini-3.5-flash-lite": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "nvidia/nvidia/nemotron-3-super-120b-a12b": {
       "confirmed_streak": 30,
@@ -70,59 +70,59 @@
     "agnes/agnes-3.0-flash": {
       "confirmed_streak": 0,
       "absent": 0,
-      "not_free": 20,
-      "last_run": "2026-11-19",
+      "not_free": 21,
+      "last_run": "2026-11-20",
       "first_bad": "2026-10-31"
     },
     "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {
       "confirmed_streak": 0,
-      "absent": 24,
+      "absent": 25,
       "not_free": 0,
-      "last_run": "2026-11-19",
+      "last_run": "2026-11-20",
       "first_bad": "2026-10-27"
     },
     "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "openrouter/google/gemma-4-31b-it:free": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "openrouter/qwen/qwen3.8-27b:free": {
-      "absent": 34,
+      "absent": 35,
       "first_bad": "2026-10-17",
       "confirmed_streak": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "openrouter/thinkingmachines/inkling:free": {
       "confirmed_streak": 0,
-      "absent": 15,
+      "absent": 16,
       "not_free": 0,
-      "last_run": "2026-11-19",
+      "last_run": "2026-11-20",
       "first_bad": "2026-11-05"
     },
     "zai/glm-4.7-flash": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     },
     "zai/glm-4.5-flash": {
-      "confirmed_streak": 34,
+      "confirmed_streak": 35,
       "absent": 0,
       "not_free": 0,
-      "last_run": "2026-11-19"
+      "last_run": "2026-11-20"
     }
   },
   "sources": {
     "openrouter": {
-      "size": 479,
-      "last_ok": "2026-11-19"
+      "size": 477,
+      "last_ok": "2026-11-20"
     },
     "nvidia": {
       "size": 83,
@@ -130,20 +130,20 @@
     },
     "gemini-models": {
       "size": 147,
-      "last_ok": "2026-11-19"
+      "last_ok": "2026-11-20"
     },
     "gemini-pricing": {
       "size": 131,
-      "last_ok": "2026-11-19"
+      "last_ok": "2026-11-20"
     },
     "zai": {
       "size": 52,
-      "last_ok": "2026-11-19"
+      "last_ok": "2026-11-20"
     },
     "agnes": {
-      "size": 103050,
-      "last_ok": "2026-11-19"
+      "size": 103305,
+      "last_ok": "2026-11-20"
     }
   },
-  "last_run": "2026-11-19"
+  "last_run": "2026-11-20"
 }
